@@ -1,5 +1,7 @@
 # covid-sars-2021-app
 
+Application shows statistics about COVID-21 in Poland
+
 ## Project setup
 ```
 npm install

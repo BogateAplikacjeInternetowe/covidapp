@@ -1,0 +1,25 @@
+.home-container {
+    background-color: rgb(252, 248, 248);
+    }
+
+.home {
+    background-color: white;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    padding: 1%;
+    }
+
+.patients {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #aaaaaa;
+    margin: 3% 3%;
+    padding: 1%;
+    }
+
+.main-page-container {
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px #aaaaaa;
+    margin: 2%;
+    padding: 1%;
+    }
+
+    
