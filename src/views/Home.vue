@@ -4,24 +4,36 @@
       <div class="container">
         <div class="row">
           <img alt="" width="5%" height="5%" src="../assets/icons/covid-icon.png"/>
-          <h1><span class="font-weight-bold">Polska</span> COVID-21 STATISTICS</h1>
+          <h1><span class="font-weight-bold">Poland</span> COVID-21 STATISTICS</h1>
         </div>
       </div>  
     </div>
 
     <div class="container">
-      <div class="row home-first-line-patients-numbers">
+      <div class="row justify-content-center home-first-line-patients-numbers">
         <div class="col-2 patients">
-          Zakażonych: {{ data.sick }}
+          PRZYPADKÓW: 
+          <div class="infected">
+            <img alt="" width="22%" height="22%" src="../assets/icons/mask.svg"/>
+            {{ responseTotalCases.infected }}</div>
         </div>
         <div class="col-2 patients">
-          W szpitalu: {{ data.recovered }}
+          ZAKAŻONYCH: 
+          <div class="activeCase">
+            <img alt="" width="20%" height="20%" src="../assets/icons/lung.svg"/>
+            {{ responseTotalCases.activeCase }}</div>
         </div>
         <div class="col-2 patients">
-          Wyzdrowiało: {{ data.inHospital}}
+          WYZDROWIAŁO: 
+          <div class="recovered">
+            <img alt="" width="20%" height="20%" src="../assets/icons/recover.svg"/>
+            {{ responseTotalCases.recovered }}</div>
         </div>
         <div class="col-2 patients">
-          Zmarło: {{ data.deaths }}
+          ZMARŁO: 
+          <div class="deceased">
+            <img alt="" width="20%" height="20%" src="../assets/icons/hospital.svg"/>
+            {{ responseTotalCases.deceased }}</div>
         </div>
       </div>
 
@@ -47,7 +59,12 @@
         </div>
       </div>
     </div>
-  </div>
+  <footer>
+    <div class="date-of-data">
+      Dane z dnia: {{ responseTotalCases.lastUpdatedAtSource }}
+    </div>
+  </footer>
+</div>
 </template>
 
 <script>
@@ -68,13 +85,13 @@ export default {
   },
   data () {
     return {
-      data: {
-          sick: 0,
-          recovered: 0,
-          inHospital: 0,
-          deaths: 0,
-      },
+      responseTotalCases: '',
     }
+  },
+  mounted() {
+    fetch('https://api.apify.com/v2/key-value-stores/3Po6TV7wTht4vIEid/records/LATEST')
+      .then((response) => response.json())
+      .then(data => this.responseTotalCases = data)
   }
 }
 </script>
