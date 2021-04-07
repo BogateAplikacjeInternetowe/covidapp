@@ -3,11 +3,11 @@
     <table class="table">
       <thead>
         <tr>
-          <th scope="col">Województwo</th>
-          <th scope="col">Zakażonych</th>
-          <th scope="col">Wyzdrowiało</th>
-          <th scope="col">Zmarło</th>
-          <th scope="col">Przetestowano</th>
+          <th scope="col">WOJEWÓDZTWO</th>
+          <th scope="col">ZAKAŻONYCH</th>
+          <th scope="col">WYZDROWIAŁO</th>
+          <th scope="col">ZMARŁO</th>
+          <th scope="col">PRZETESTOWANO</th>
         </tr>
       </thead>
       <tbody>
@@ -41,12 +41,21 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+table {
+  font-size: 14px;
+}
+
 thead {
   background-color: rgb(247, 244, 244);
+  color: rgb(138, 136, 136);
+  font-size: 11px;
 }
+
 tr {
   text-align: center;
 }
+
 tr:hover {
   transition: 0.3s;
   background-color: rgb(247, 244, 244);

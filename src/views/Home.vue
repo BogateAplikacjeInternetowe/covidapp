@@ -42,16 +42,16 @@
           <TableRegions/>
         </div>
         <div class="col main-page-container">
-          <SecondComponent msg="TUTAJ MOZNA JAKAS MAPKE"/>
+          <SecondComponent/>
         </div>
       </div>
 
       <div class="row home-third-line">
         <div class="col main-page-container">
-          <ThirdComponent msg="TUTAJ WYKRES NR 1"/>
+          <ThirdComponent/>
         </div>
         <div class="col main-page-container">
-          <FourthComponent msg="TUTAJ WYKRES NR 2 NP NA TLE SREDNIEJ NA SWIECIE"/>
+          <FourthComponent/>
         </div>
       </div>
     </div>
