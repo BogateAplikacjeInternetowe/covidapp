@@ -39,22 +39,18 @@
 
       <div class="row home-second-line">
         <div class="col main-page-container">
-          <img alt="Vue logo" src="../assets/logo.png">
-          <FirstComponent msg="TUTAJ MOZEMY UMIESCIC TABELE Z PODZIALEM NA WOJEWODZTWA"/>
+          <TableRegions/>
         </div>
         <div class="col main-page-container">
-          <img alt="Vue logo" src="../assets/logo.png">
           <SecondComponent msg="TUTAJ MOZNA JAKAS MAPKE"/>
         </div>
       </div>
 
       <div class="row home-third-line">
         <div class="col main-page-container">
-          <img alt="Vue logo" src="../assets/logo.png">
           <ThirdComponent msg="TUTAJ WYKRES NR 1"/>
         </div>
         <div class="col main-page-container">
-          <img alt="Vue logo" src="../assets/logo.png">
           <FourthComponent msg="TUTAJ WYKRES NR 2 NP NA TLE SREDNIEJ NA SWIECIE"/>
         </div>
       </div>
@@ -69,7 +65,7 @@
 
 <script>
 // @ is an alias to /src
-import FirstComponent from '@/components/FirstComponent.vue'
+import TableRegions from '@/components/TableRegions.vue'
 import SecondComponent from '@/components/SecondComponent.vue'
 import ThirdComponent from '@/components/ThirdComponent.vue'
 import FourthComponent from '@/components/FourthComponent.vue'
@@ -78,7 +74,7 @@ import FourthComponent from '@/components/FourthComponent.vue'
 export default {
   name: 'Home',
   components: {
-    FirstComponent,
+    TableRegions,
     SecondComponent,
     ThirdComponent,
     FourthComponent

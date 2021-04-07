@@ -42,4 +42,7 @@ footer {
     background-color: white;
     box-shadow: 2px 2px 2px 2px #aaaaaa;
     padding-right: 4%;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
 }    
