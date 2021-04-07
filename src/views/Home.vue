@@ -12,16 +12,16 @@
     <div class="container">
       <div class="row home-first-line-patients-numbers">
         <div class="col-2 patients">
-          CHORYCH
+          Zakażonych: {{ data.sick }}
         </div>
         <div class="col-2 patients">
-          WYZDROWIAŁYCH
+          W szpitalu: {{ data.recovered }}
         </div>
         <div class="col-2 patients">
-          W SZPITALU
+          Wyzdrowiało: {{ data.inHospital}}
         </div>
         <div class="col-2 patients">
-          MARTWYCH
+          Zmarło: {{ data.deaths }}
         </div>
       </div>
 
@@ -65,6 +65,16 @@ export default {
     SecondComponent,
     ThirdComponent,
     FourthComponent
+  },
+  data () {
+    return {
+      data: {
+          sick: 0,
+          recovered: 0,
+          inHospital: 0,
+          deaths: 0,
+      },
+    }
   }
 }
 </script>
