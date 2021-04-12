@@ -51,7 +51,7 @@
           <ThirdComponent/>
         </div>
         <div class="col main-page-container">
-          <FourthComponent/>
+          <WorldAverageChart/>
         </div>
       </div>
     </div>
@@ -68,7 +68,7 @@
 import TableRegions from '@/components/TableRegions.vue'
 import SecondComponent from '@/components/SecondComponent.vue'
 import ThirdComponent from '@/components/ThirdComponent.vue'
-import FourthComponent from '@/components/FourthComponent.vue'
+import WorldAverageChart from '@/components/WorldAverageChart.vue'
 
 
 export default {
@@ -77,7 +77,7 @@ export default {
     TableRegions,
     SecondComponent,
     ThirdComponent,
-    FourthComponent
+    WorldAverageChart
   },
   data () {
     return {
