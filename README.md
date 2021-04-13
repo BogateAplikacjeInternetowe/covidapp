@@ -39,3 +39,7 @@ https://my.api.mockaroo.com/Countries.json?key=8af4be50
 3. Go to your folder and run:
 `serve -s dist`
 4. Now enter displayed localhost:port adress
+
+## How to deploy production on github-pages? 
+1. For that we have set **deploy.sh** script. 
+2. Run it when you want to deploy to production   
