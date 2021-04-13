@@ -28,3 +28,18 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Endpoint for random 10 Countries:
 https://my.api.mockaroo.com/Countries.json?key=8af4be50
+
+
+
+## How to run production on local? 
+1. Create production build:
+`npm run build`
+2. Install Node.js static file server:
+`npm install -g serve`
+3. Go to your folder and run:
+`serve -s dist`
+4. Now enter displayed localhost:port adress
+
+## How to deploy production on github-pages? 
+1. For that we have set **deploy.sh** script. 
+2. Run it when you want to deploy to production   
