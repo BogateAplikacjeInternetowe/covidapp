@@ -5,7 +5,7 @@
         <tr>
           <th scope="col">WOJEWÓDZTWO</th>
           <th scope="col">ZAKAŻONYCH</th>
-          <th scope="col">WYZDROWIAŁO</th>
+          <th scope="col">WYZDROWIAŁO DZIŚ</th>
           <th scope="col">ZMARŁO</th>
           <th scope="col">PRZETESTOWANO</th>
         </tr>
@@ -43,7 +43,7 @@ export default {
 <style scoped>
 
 table {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 thead {

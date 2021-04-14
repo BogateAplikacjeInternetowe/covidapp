@@ -5,7 +5,7 @@ html * {
     background-color: rgb(252, 248, 248);
     }
 
-.home {
+.navbar {
     background-color: white;
     box-shadow: 2px 2px 2px #aaaaaa;
     padding: 1%;
@@ -32,12 +32,12 @@ html * {
 .main-page-container {
     background-color: white;
     box-shadow: 2px 2px 2px 2px #aaaaaa;
-    margin: 2%;
+    margin: 1%;
     padding: 1%;
     }
 
 footer {
-    font-size: 12px;
+    font-size: 11px;
     text-align: right;
     background-color: white;
     box-shadow: 2px 2px 2px 2px #aaaaaa;
@@ -46,3 +46,8 @@ footer {
     position: fixed;
     width: 100%;
 }    
+.home-fourth-line {
+    width: 60%;
+    height: 750px;
+    margin: 0 auto !important;
+}

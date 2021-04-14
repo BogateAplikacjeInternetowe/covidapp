@@ -1,6 +1,6 @@
 <template>
   <div class="home-container">
-    <div class="home">
+    <div class="navbar">
       <div class="container">
         <div class="row">
           <img alt="" width="5%" height="5%" src="../assets/icons/covid-icon.png"/>
@@ -9,7 +9,7 @@
       </div>  
     </div>
 
-    <div class="container">
+    <div class="container home-body">
       <div class="row justify-content-center home-first-line-patients-numbers">
         <div class="col-2 patients">
           PRZYPADKÓW: 
@@ -24,7 +24,7 @@
             {{ responseTotalCases.activeCase }}</div>
         </div>
         <div class="col-2 patients">
-          WYZDROWIAŁO: 
+          WYZDROWIAŁO DZIŚ: 
           <div class="recovered">
             <img alt="" width="20%" height="20%" src="../assets/icons/recover.svg"/>
             {{ responseTotalCases.recovered }}</div>
@@ -41,9 +41,6 @@
         <div class="col main-page-container">
           <TableRegions/>
         </div>
-        <div class="col main-page-container">
-          <SecondComponent/>
-        </div>
       </div>
 
       <div class="row home-third-line">
@@ -52,6 +49,11 @@
         </div>
         <div class="col main-page-container">
           <WorldAverageChart/>
+        </div>
+      </div>
+      <div class="row home-fourth-line">
+        <div class="col main-page-container">
+          <PolandMap/>
         </div>
       </div>
     </div>
@@ -66,7 +68,7 @@
 <script>
 // @ is an alias to /src
 import TableRegions from '@/components/TableRegions.vue'
-import SecondComponent from '@/components/SecondComponent.vue'
+import PolandMap from '@/components/PolandMap.vue'
 import ThirdComponent from '@/components/ThirdComponent.vue'
 import WorldAverageChart from '@/components/WorldAverageChart.vue'
 
@@ -75,7 +77,7 @@ export default {
   name: 'Home',
   components: {
     TableRegions,
-    SecondComponent,
+    PolandMap,
     ThirdComponent,
     WorldAverageChart
   },
