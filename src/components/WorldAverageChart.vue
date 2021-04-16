@@ -11,7 +11,6 @@ export default {
     loaded: false,
     chartdata: null,
     labels: [],
-//<<<<<<<<<<<<<<<<<<< NOW JUST PUT MOCKAROO API DATA HERE >>>>>>>>>>>>>>>>>>>>
   }),
     mounted() {
     const ctx = document.getElementById('world-average-chart');
