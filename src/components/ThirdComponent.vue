@@ -2,12 +2,12 @@
   <div class="container">
     <div class="row mt-5">
       <div class="col">
-        <h2 class="text-center">vaccinations</h2>
-        <line-chart
+        <h2 class="text-center">Zaszczepionych ogółem:</h2>
+        <line-chart v-if="loaded"
           :chartData="arr"
           :options="chartOptions"
           :chartColors="positiveChartColors"
-          label="vaccinations"
+           label="Liczba zaszczepionych"
         />
       </div>
     </div>
@@ -16,8 +16,7 @@
 
 <script>
 import axios from "axios";
-//import moment from "moment";
-import LineChart from "./VaccinationsChart";
+import LineChart from "@/components/VaccinationsChart.vue";
 export default {
   components: {
     LineChart
@@ -25,6 +24,8 @@ export default {
   data() {
     return {
       arr: [],
+      //wait until data is loaded
+      loaded: false,
       //liczba_szczepien_ogolem: [],
       positiveChartColors: {
         borderColor: "#077187",
@@ -48,6 +49,7 @@ export default {
       this.arr.push({liczba_szczepien_ogolem, total: wojewodztwo });
       console.log("data", this.arr);
     });
+    this.loaded=true;
   }
 };
 </script>
