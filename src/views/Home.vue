@@ -45,7 +45,7 @@
 
       <div class="row home-third-line">
         <div class="col main-page-container">
-          <ThirdComponent/>
+          <VaccinationChart/>
         </div>
         <div class="col main-page-container">
           <WorldAverageChart/>
@@ -69,7 +69,7 @@
 // @ is an alias to /src
 import TableRegions from '@/components/TableRegions.vue'
 import PolandMap from '@/components/PolandMap.vue'
-import ThirdComponent from '@/components/ThirdComponent.vue'
+import VaccinationChart from '@/components/VaccinationChart.vue'
 import WorldAverageChart from '@/components/WorldAverageChart.vue'
 
 
@@ -78,7 +78,7 @@ export default {
   components: {
     TableRegions,
     PolandMap,
-    ThirdComponent,
+    VaccinationChart,
     WorldAverageChart
   },
   data () {
