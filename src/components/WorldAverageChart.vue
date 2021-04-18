@@ -1,5 +1,8 @@
 <template>
   <div class="chart-container">
+      <h3 class="text-center">ŚWIAT</h3>
+      <h6 class="text-center">LICZBA PRZYPADKÓW ORAZ ZASZCZEPIONYCH</h6>
+      <hr/>
     <canvas id="world-average-chart"></canvas>
   </div>
 </template>
@@ -28,18 +31,18 @@ export default {
           labels: this.chartData.map((d) => d.country),
           datasets: [
             {
-              label: "Number of Vaccines",
+              label: "Liczba zaszczepionych",
               data: this.chartData.map((d) => d.vaccines),
-              backgroundColor: "rgba(54,73,93,.5)",
-              borderColor: "#36495d",
-              borderWidth: 3,
+              backgroundColor: "#74A57F",
+              borderColor: "#077187",
+              borderWidth: 2,
             },
             {
-              label: "Number of Cases",
+              label: "Liczba przypadków",
               data: this.chartData.map((d) => d.cases),
-              backgroundColor: "rgba(71, 183,132,.5)",
-              borderColor: "#47b784",
-              borderWidth: 3,
+              backgroundColor: "rgba(161, 105, 105)",
+              borderColor: "rgba(209, 0, 0)",
+              borderWidth: 2,
             },
           ],
         },
@@ -49,4 +52,7 @@ export default {
 };
 </script>
 <style scoped>
+#world-average-chart {
+  height: 250%;
+}
 </style>

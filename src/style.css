@@ -1,6 +1,9 @@
 html * {
     font-family: Ubuntu, sans-serif;
 }
+h6, h5 {
+    color: rgb(138, 136, 136);
+}
 .home-container {
     background-color: rgb(252, 248, 248);
     }
@@ -19,7 +22,7 @@ html * {
     color: rgb(138, 136, 136);
     font-size: 11px;
 }
-.patients:hover {
+.patients:hover, h3:hover {
      transition: 0.6s;
      background-color: rgb(247, 244, 244);
 }

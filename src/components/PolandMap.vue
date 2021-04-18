@@ -1,7 +1,7 @@
 <template>
   <div class="poland-map">
-    <h1>{{ province }}</h1>
-    <h2>{{ cases }}</h2>
+    <h3>{{ province }}</h3>
+    <h5>{{ cases }}</h5>
     <hr />
     <!-- (c) ammap.com | SVG map of Poland - High -->
     <svg
@@ -150,7 +150,7 @@ export default {
           const cases = (this.id = this.$responseRegions.regions.find(
             (region) => region.id === id
           ).cases);
-          this.cases = "Liczba zachorowań: " + cases;
+          this.cases = "LICZBA ZACHOROWAŃ: " + cases;
         });
       });
     },

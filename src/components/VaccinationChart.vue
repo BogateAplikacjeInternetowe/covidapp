@@ -1,15 +1,14 @@
 <template>
-  <div class="container">
-    <div class="row mt-5">
-      <div class="col">
-        <h2 class="text-center">Zaszczepionych ogółem:</h2>
-        <line-chart v-if="loaded"
-          :chartData="arr"
-          :options="chartOptions"
-          :chartColors="positiveChartColors"
-           label="Liczba zaszczepionych"
-        />
-      </div>
+  <div class="chart-container">
+    <div class="col">
+      <h3 class="text-center">POLSKA</h3>
+      <h6 class="text-center">ZASZCZEPIONYCH OGÓŁEM</h6>
+      <hr/>
+      <line-chart v-if="loaded"
+        :chartData="arr"
+        :options="chartOptions"
+        :chartColors="positiveChartColors"
+          label="Liczba zaszczepionych"/>
     </div>
   </div>
 </template>
@@ -53,3 +52,6 @@ export default {
   }
 };
 </script>
+<style scoped>
+
+</style>
