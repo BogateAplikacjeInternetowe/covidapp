@@ -4,40 +4,49 @@
   </div>
 </template>
 <script>
-import Chart from 'chart.js'
+import Chart from "chart.js";
 export default {
-  name: 'WorldAverageChart',
+  name: "WorldAverageChart",
   data: () => ({
     loaded: false,
-    chartdata: null,
+    chartData: [],
     labels: [],
   }),
-    mounted() {
-    const ctx = document.getElementById('world-average-chart');
-    new Chart(ctx, {
-          type: "line",
-          data: {
-          labels: ["Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune"],
+  mounted() {
+    fetch("https://my.api.mockaroo.com/global_vaccines_cases.json?key=d80167b0")
+      .then((response) => response.json())
+      .then((data) => (this.chartData = data))
+      .then(() => this.renderChart());
+  },
+  methods: {
+    renderChart() {
+      console.log(this.chartData);
+      const ctx = document.getElementById("world-average-chart");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: this.chartData.map((d) => d.country),
           datasets: [
             {
-              label: "Number of Moons",
-              data: [0, 0, 1, 2, 79, 82, 27, 14],
+              label: "Number of Vaccines",
+              data: this.chartData.map((d) => d.vaccines),
               backgroundColor: "rgba(54,73,93,.5)",
               borderColor: "#36495d",
-              borderWidth: 3
+              borderWidth: 3,
             },
             {
-              label: "Planetary Mass (relative to the Sun x 10^-6)",
-              data: [0.166, 2.081, 3.003, 0.323, 954.792, 285.886, 43.662, 51.514],
+              label: "Number of Cases",
+              data: this.chartData.map((d) => d.cases),
               backgroundColor: "rgba(71, 183,132,.5)",
               borderColor: "#47b784",
-              borderWidth: 3
-            }
-          ]
+              borderWidth: 3,
+            },
+          ],
         },
-    });
+      });
+    },
   },
-}
+};
 </script>
 <style scoped>
 </style>
